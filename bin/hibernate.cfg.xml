@@ -14,6 +14,8 @@
 		<mapping resource="employee.hbm.xml" />
 		<mapping resource="users.hbn.xml" />
 		<mapping resource="groups.hbn.xml" />
+		
+		
 
 		
 	</session-factory>

@@ -1,7 +1,11 @@
 package com.hibernateex;
 
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
+import com.hibernateex.dao.EmployeeDAO;
+import com.hibernateex.dao.GroupDAO;
+import com.hibernateex.dao.UserDAO;
+import com.hibernateex.entities.Employee;
+import com.hibernateex.entities.Group;
+import com.hibernateex.entities.User;
 
 public class app {
 	
@@ -10,7 +14,7 @@ public class app {
 	public static void main(String[] args) {
 		
 
-		ManageEmployee ME = new ManageEmployee();
+		EmployeeDAO ME = new EmployeeDAO();
 		//Employee em1=new Employee(null,"nam",null , 0);
 		Employee em1=new Employee();
 		em1.setFirstName("tri");
@@ -20,25 +24,38 @@ public class app {
 		
 		
 		
-		ME.update(em1);
+		//ME.update(em1);
 		//ME.delete(em1);
-		//ME.listEmployees();
+		ME.listEmployees();
 		//ME.getUserByID(5);
+		//ME.create(em1);
 
 		 //ME.listEmployees();
 		//ME.deleteUser(1);
 		//ME.addUser("tri123", "nguyen", 300);
 		//ME.updateUser(3, "nam123", "tran", 700);
 		
+		UserDAO userdao=new UserDAO();
 		
-		try
-		  {
-			ME.listEmployees();
-		  }
-		   catch(Exception ex)
-		  {
-		   ex.printStackTrace(System.out);
-		  }
+		User us1=new User();
+		us1.setEmail("tringuyen@123");
+		us1.setUsername("nam nguyen");
+		//us1.setUserid(4);
+		//us1.setGroup(group);;
+		
+		//userdao.create(us1);
+		userdao.getAllUser();
+		
+		
+//		GroupDAO groupdao=new GroupDAO();
+//		Group group1=new Group();
+//		group1.setLevel("leval 1");
+//		group1.setTitle("dev java");
+//		group1.setGroupid(1);
+//		groupdao.create(group1);
+		
+		
+		
 	}
 
 }

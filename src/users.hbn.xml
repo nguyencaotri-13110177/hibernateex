@@ -4,7 +4,7 @@
       "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="com.hibernateex.Users" table="users">
+	<class name="com.hibernateex.entities.User" table="users">
 
 		<id name="userid" type="int" column="userid">
 			<generator class="native" />
@@ -14,8 +14,8 @@
 		<property name="email" column="email" type="string" />
 
 
-		<many-to-one name = "groupid" column = "groupid" 
-         class="com.hibernateex.Groups" not-null="true"/>
+		<many-to-one name="group" class="com.hibernateex.entities.Group"
+            column="groupid"/>
 
 
 	</class>

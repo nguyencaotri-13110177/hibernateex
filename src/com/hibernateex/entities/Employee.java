@@ -1,4 +1,4 @@
-package com.hibernateex;
+package com.hibernateex.entities;
 
 public class Employee {
 

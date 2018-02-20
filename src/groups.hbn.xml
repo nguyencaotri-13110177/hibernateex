@@ -4,14 +4,19 @@
       "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="com.hibernateex.Groups" table="groups">
+	<class name="com.hibernateex.entities.Group" table="groups">
 	
 		<id name="groupid" type="int" column="groupid">
 			<generator class="native" />
 		</id>
 
-		<property name="title" column="username" type="string" />
+		<property name="title" column="title" type="string" />
 		<property name="level" column="level" type="string" />
+		
+		<set name="user" inverse="true" cascade="all">
+            <key column="groupid" not-null="true" />
+            <one-to-many class="com.hibernateex.entities.User"/>
+        </set>
 
 	</class>
 </hibernate-mapping>

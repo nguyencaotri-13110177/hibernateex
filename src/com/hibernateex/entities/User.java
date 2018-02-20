@@ -1,11 +1,11 @@
-package com.hibernateex;
+package com.hibernateex.entities;
 
-public class Users {
+public class User {
 
 	private int userid;
 	private String username;
 	private String email;
-	private int groupid;
+	private Group group;
 
 	public int getUserid() {
 		return userid;
@@ -31,12 +31,14 @@ public class Users {
 		this.email = email;
 	}
 
-	public int getGroupid() {
-		return groupid;
+	public Group getGroup() {
+		return group;
 	}
 
-	public void setGroupid(int groupid) {
-		this.groupid = groupid;
+	public void setGroup(Group group) {
+		this.group = group;
 	}
+
+	
 
 }
