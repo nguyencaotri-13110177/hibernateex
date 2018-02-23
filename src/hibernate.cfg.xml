@@ -10,11 +10,14 @@
 		<property name="hibernate.connection.username"> root </property>
 		<property name="hibernate.connection.password"> 1234 </property>
 		<property name="hibernate.dialect"> org.hibernate.dialect.MySQLDialect </property>
-
+<!--  
 		<mapping resource="employee.hbm.xml" />
 		<mapping resource="users.hbn.xml" />
 		<mapping resource="groups.hbn.xml" />
-		
+-->		
+<mapping class="com.hibernateex.entities.Employee"/>
+<mapping class="com.hibernateex.entities.Group"/>
+<mapping class="com.hibernateex.entities.User"/>
 		
 
 		

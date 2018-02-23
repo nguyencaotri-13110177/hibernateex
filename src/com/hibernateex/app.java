@@ -47,12 +47,12 @@ public class app {
 		userdao.getAllUser();
 		
 		
-//		GroupDAO groupdao=new GroupDAO();
-//		Group group1=new Group();
-//		group1.setLevel("leval 1");
-//		group1.setTitle("dev java");
-//		group1.setGroupid(1);
-//		groupdao.create(group1);
+		GroupDAO groupdao=new GroupDAO();
+		Group group1=new Group();
+		group1.setLevel("leval 1");
+		group1.setTitle("dev java");
+		group1.setGroupid(1);
+		//groupdao.create(group1);
 		
 		
 		
